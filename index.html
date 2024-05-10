@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+        <div class="password-strength">
+            <h1>Password Strength Indicator</h1>
+            <input type="password" id="password" placeholder="Type password">
+            <div class="strength" id="strength"></div>
+        </div>
+    </center>
+
+    <script>
+
+
+        var passwordInput = document.getElementById('password');
+        var passwordStrength = document.getElementById('strength');
+
+        passwordInput.addEventListener('input', function () {
+            var password = passwordInput.value;
+            var strength = '';
+
+            if (password.length < 4) {
+                strength = 'Weak';
+                
+            } else if (password.match(/[a-zA-Z]/) && password.match(/[0-9]/) && password.match(/[!@#$]/)) {
+                strength = 'Strong';
+            } else {
+                strength = 'Medium';
+            }
+
+            passwordStrength.innerText = 'Your password is ' + strength;
+        }
+    );
+
+    </script>
+</body>
+
+</html>

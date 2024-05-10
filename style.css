@@ -1,0 +1,41 @@
+*{
+  padding: 0%;
+  margin: 0%;
+}
+
+
+.password-strength {
+  width: 400px;
+  padding: 20px;
+  font-weight: bold;
+  margin-top: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  
+}
+
+.password-strength input {
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+  margin-top: 30px;
+  border-radius: 3px;
+}
+
+.password-strength .strength {
+  height: 10px;
+  margin-top: 10px;
+}
+
+.password-strength .strength .Weak {
+  background-color: red;
+}
+
+.password-strength .strength .Medium {
+  background-color: yellow;
+}
+
+.password-strength .strength .Strong {
+  background-color: green;
+}
